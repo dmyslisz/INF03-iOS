@@ -44,12 +44,16 @@ struct RootView: View {
 
                         Text("Ucz się po swojemu")
                             .font(.title2.bold())
-                        NavigationLink("Przeglądaj tematy", systemImage: "books.vertical") {
+                        NavigationLink {
                             LearningView()
+                        } label: {
+                            Label("Przeglądaj tematy", systemImage: "books.vertical")
                         }
                         .buttonStyle(.glass)
-                        NavigationLink("Powtórz fiszki", systemImage: "rectangle.on.rectangle") {
+                        NavigationLink {
                             FlashcardsView()
+                        } label: {
+                            Label("Powtórz fiszki", systemImage: "rectangle.on.rectangle")
                         }
                         .buttonStyle(.glass)
                     }
