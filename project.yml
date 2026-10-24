@@ -1,0 +1,23 @@
+name: INF03iOS
+options:
+  deploymentTarget:
+    iOS: "26.0"
+
+targets:
+  INF03iOS:
+    type: application
+    platform: iOS
+    deploymentTarget: "26.0"
+    sources:
+      - path: INF03iOS
+    dependencies:
+      - sdk: libsqlite3.tbd
+    settings:
+      base:
+        SWIFT_VERSION: "5.9"
+        PRODUCT_BUNDLE_IDENTIFIER: pl.dmyslisz.inf03ios
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: "YES"
+        INFOPLIST_KEY_CFBundleDisplayName: "INF.03 Nauka"
+        INFOPLIST_KEY_UILaunchScreen_Generation: "YES"
+        CODE_SIGNING_ALLOWED: "NO"
